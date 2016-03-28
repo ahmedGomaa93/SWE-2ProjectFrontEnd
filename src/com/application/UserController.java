@@ -54,7 +54,7 @@ public class UserController {
 		HttpSession session = request.getSession();
 		Long id = (Long) session.getAttribute("id");
 		//String serviceUrl = "http://se2firstapp-softwareeng2.rhcloud.com/FCISquare/rest/updatePosition";
-		String serviceUrl = "http://localhost:8080/FCISquare/rest/login";
+		String serviceUrl = "http://fcisquare-gsam.rhcloud.com/FCISquare/rest/login";
 
 		String urlParameters = "id=" + id + "&lat=" + lat + "&long="+ lon;
 		// System.out.println(urlParameters);
@@ -83,7 +83,7 @@ public class UserController {
 	public Response showHomePage(@FormParam("email") String email,
 			@FormParam("pass") String pass) {
 		//String serviceUrl = "http://se2firstapp-softwareeng2.rhcloud.com/FCISquare/rest/login";
-		String serviceUrl = "http://localhost:8080/FCISquare/rest/login";
+		String serviceUrl = "http://fcisquare-gsam.rhcloud.com/FCISquare/rest/login";
 
 		String urlParameters = "email=" + email + "&pass=" + pass;
 		// System.out.println(urlParameters);
@@ -121,7 +121,7 @@ public class UserController {
 	public Response showHomePage(@FormParam("name") String name,
 			@FormParam("email") String email, @FormParam("pass") String pass) {
 		//String serviceUrl = "http://se2firstapp-softwareeng2.rhcloud.com/FCISquare/rest/signup";
-		String serviceUrl = "http://localhost:8080/FCISquare/rest/signup";
+		String serviceUrl = "http://fcisquare-gsam.rhcloud.com/FCISquare/rest/signup";
 
 		String urlParameters = "name=" + name + "&email=" + email + "&pass="
 				+ pass;
